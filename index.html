@@ -3,11 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat widget</title>
+  <title>Airport of Zvartnots</title>
+  <style>
+    body {
+        background-image: url("airport.jpeg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    #container {
+        text-align: center;
+        margin-top: 50px;
+        background-color: rgba(255,255,255,0.4);
+        border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-Aystegh karox e linel dzer govazd@
 <!--Start of Tawk.to Script-->
+<main id="container">
+</main>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script>
+  const app = document.getElementById('container');
+
+  const typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 75,
+  });
+
+  typewriter
+    .pauseFor(1000)
+    .typeString('<span style="font-size: 20px">' +
+      'Այստեղ կարող եք գտնել Ձեզ հուզող հարցերի պատասխանները</span>')
+    .pauseFor(300)
+    .deleteChars(20)
+    .typeString('<span style="font-size: 20px">հիմար հարցերի պատասխանները</span>')
+    // .typeString('<strong>only <span style="color: #27ae60;">5kb</span> Gzipped!</strong>')
+    .pauseFor(1000)
+    .start();
+
+</script>
 <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
